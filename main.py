@@ -31,24 +31,17 @@ pad_height = 640
 fight_width = 36
 
 fight_height = 38
-<<<<<<< HEAD
+
 
     #사이드킥 크기
 
 fighter2_width = 36 #플레이어2 크기______________________________________________________________________
 
-fighter2_height = 38:
-    #적 크기
-
-enemy_width = 30
-
-=======
-    #사이드킥 크기
-fighter2_width = 36 #플레이어2 크기
 fighter2_height = 38
+
     #적 크기
 enemy_width = 30
->>>>>>> feature
+
 enemy_height = 20
 
 
