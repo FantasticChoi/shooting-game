@@ -97,7 +97,7 @@ def drawHeart1(count): #플레이어1 목숨 화면 상단에 구현____________
     text = font.render('Player1 Heart: ' + str(count), True, RED)
     gamepad.blit(text, (150, 0))
 
-def drawHeart2(count): #플레이어1 목숨 화면 상단에 구현_______________________________________________________
+def drawHeart2(count): #플레이어2 목숨 화면 상단에 구현_______________________________________________________
     global gamepad
 
     font = pygame.font.SysFont('arial', 20)
@@ -165,15 +165,12 @@ def runGame():
     global bullet, enemy, bullet2 #총알2_______________________________________________________________
 
 
-=======
-    global gamepad, fighter, clock, fighter2 #플레이어2______________________________________________
-    global bullet, enemy, bullet2 #총알2_______________________________________________________________
-
     isShot = False #적이 맞았는지 확인용
 
     shotcount = 0 #적 맞힌 횟수
 
     enemypassed = 0 #지나간 적 횟수
+
     player1IsShot = 3  # 플레이어1의 목숨______________________________________________________________
     player2IsShot = 3  # 플레이어2의 목숨______________________________________________________________
 
@@ -216,11 +213,11 @@ def runGame():
 
     #-(반복루프)-
 
+    while not ongame:
+
         #2. fighter 사용자 입력 처리        ### fighter2 사용자 입력 처리 작업 진행중입니다. ###
 
-=======
-        #2. fighter 사용자 입력 처리        ### fighter2 사용자 입력 처리 작업 진행중입니다. ###
->>>>>>> feature
+
         for event in pygame.event.get():
 
             if event.type == pygame.QUIT: #마우스로 창 닫으면 while문 탈출
@@ -488,7 +485,6 @@ def runGame():
 #1. 라이브러리 초기화 함수
 
 def initGame():
-<<<<<<< HEAD
 
     global gamepad, fighter, clock, fighter2
 
