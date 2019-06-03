@@ -149,6 +149,8 @@ def runGame():
                         bullet_x = x + fight_width / 2
                         bullet_y = y - fight_height
                         bullet_xy.append([bullet_x, bullet_y])
+                        pygame.mixer.music.load("weapon-sound1.ogg")
+                        pygame.mixer.music.play()
 
 
                 elif event.key == pygame.K_SPACE:  # 플2 공격키 스페이스바  (__________________________________________)
@@ -156,6 +158,8 @@ def runGame():
                         bullet_x = x2 + fighter2_width / 2
                         bullet_y = y2 + fighter2_height
                         bullet2_xy.append([bullet_x, bullet_y])
+                        pygame.mixer.music.load("weapon-sound1.ogg")
+                        pygame.mixer.music.play()
 
             if event.type == pygame.KEYUP:  # 키 누른 후
                 if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
@@ -181,6 +185,8 @@ def runGame():
                     (enemy_x + enemy_width > x and enemy_x + enemy_width < x + fight_width):
                 enemy_y = 0  # 적은 사라지고 생명이 1만큼 깎임________________________________________-----------------------
                 player1IsShot -= 1
+                pygame.mixer.music.load("beatt-sound4.ogg")
+                pygame.mixer.music.play()
 
                 if player1IsShot == 0:
                     crash()
@@ -190,6 +196,8 @@ def runGame():
                     (enemy_x + enemy_width > x and enemy_x + enemy_width < x2 + fighter2_width):
                 enemy_y = 0  # 적은 사라지고 생명이 1만큼 깎임________________________________________
                 player2IsShot -= 1
+                pygame.mixer.music.load("beatt-sound4.ogg")
+                pygame.mixer.music.play()
 
                 if player2IsShot == 0:
                     crash()
@@ -209,9 +217,13 @@ def runGame():
                         bullet_xy.remove(bxy)
                         isShot = True
                         shotcount += 1
+                        pygame.mixer.music.load("att-sound1-9.ogg")
+                        pygame.mixer.music.play()
 
                 if bxy[1] < fake_y:
                     if bxy[0] > fake_x and bxy[0] < fake_x + fake_width:
+                        pygame.mixer.music.load("att-sound1-9.ogg")
+                        pygame.mixer.music.play()
                         bullet_xy.remove(bxy)
                         crash()
 
@@ -233,8 +245,12 @@ def runGame():
                         bullet2_xy.remove(bxy)
                         isShot = True
                         shotcount += 1
+                        pygame.mixer.music.load("att-sound1-9.ogg")
+                        pygame.mixer.music.play()
                 if bxy[1] < fake_y:  # ---------------------------------------------3+(1+2)----------
                     if bxy[0] > fake_x and bxy[0] < fake_x + fake_width:
+                        pygame.mixer.music.load("att-sound1-9.ogg")
+                        pygame.mixer.music.play()
                         bullet_xy.remove(bxy)
                         crash()
                 # 총알이 화면밖으로 갈때
