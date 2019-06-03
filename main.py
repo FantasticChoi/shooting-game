@@ -251,7 +251,7 @@ def runGame():
                     if bxy[0] > fake_x and bxy[0] < fake_x + fake_width:
                         pygame.mixer.music.load("att-sound1-9.ogg")
                         pygame.mixer.music.play()
-                        bullet_xy.remove(bxy)
+                        bullet2_xy.remove(bxy)
                         crash()
                 # 총알이 화면밖으로 갈때
                 if bxy[1] <= 0:
